@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Webex Web Light Dialer">
+        <meta itemprop="name" content="Webex Web Light Dialer">
+        <meta itemprop="description" content="Webex Web Light Dialer">
+        <meta property="og:title" content="Webex Web Light Dialer">
+        <meta property="og:description" content="Webex Web Light Dialer">
+        <meta property="og:site_name" content="Webex Web Light Dialer">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="img/favicon.png" sizes="128x128">
+        <link rel="icon" href="img/favicon.png" type="image/x-icon">
+        <meta name="application-name" content="Cisco UI Kit">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="img/mstile.png">
+        <meta name="msapplication-square70x70logo" content="img/mstile.png">
+        <meta name="msapplication-square150x150logo" content="img/mstile.png">
+        <meta name="msapplication-wide310x150logo" content="img/mstile.png">
+        <meta name="msapplication-square310x310logo" content="img/mstile.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/custom_loader.css">
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/webex/umd/webex.min.js"></script>
+        <script src="js/index.js"></script>        
+        <script language="JavaScript" type="text/javascript" src="https://kjur.github.io/jsrsasign/jsrsasign-latest-all-min.js"></script>
+        <title>Webex Web Light Dialer</title>
+    </head>
+    <body>
+        <div id="dialer" class="dial-bar">
+            <img class="logo" src="img/webex.png"/>
+            <input class="destination" type="text" id="invitee" placeholder="Who would you like to call?"/>
+            <div class="button-dial asleep" id="btn-dial"><img src="img/phone.svg" alt="" class="icon"/><span class="label">Call</span></div>
+        </div>
+
+        <div class="header hidden" id="header">
+            <img class="logo" src="img/webex.png"/>
+            <span class="title">Welcome to your web call - Powered by Webex APIs</span>
+        </div>
+        
+        <div class="views">
+
+            <video class="full hidden" id="remote-view-video" autoplay playsinline></video>
+            <video class="thumbnail hidden" id="self-view" muted autoplay playsinline></video>
+            <audio id="remote-view-audio" autoplay playsinline></audio>
+
+            <div class="full" id="status-notice">
+                <div class="announcement">
+                    <div class="loader"></div>
+                    <span class="title" id="banner-status">Setting up. Please standby ...</span>
+                </div>
+            </div>
+
+            <div class="full hidden" id="ready-notice">
+                <div class="announcement">
+                    <img src="img/collab.svg" alt="" class="icon"/>
+                    <span class="title" id="banner-ready">Please enter an address above and click Call</span>
+                </div>
+            </div>
+
+            <div class="full hidden" id="error-notice">
+                <div class="error">
+                    <img src="img/warning.svg" alt="" class="icon"/>
+                    <span class="title" id="banner-error">An error occured</span>
+                </div>
+            </div>
+
+            <div class="buttons hidden" id="buttons">            
+                <div id="hangup" class="button exit"><img src="img/app-exit.svg" alt="" class="icon"/><span class="label">Exit</span></div>
+                <div id="mute_voice" class="button mute"><img id="mute-voice-icon" src="img/audio.svg" alt="" class="icon"/><span class="label" id="mute-voice-label">Mute audio</span></div>
+                <div id="mute_video" class="button mute"><img id="mute-video-icon" src="img/video.svg" alt="" class="icon"/><span class="label" id="mute-video-label">Hide video</span></div>
+            </div>
+        </div>        
+    </body>
+</html>

@@ -1,0 +1,245 @@
+:root{
+    --body: #f2f2f2;
+    --views: #dee2e6;
+    --asleep:  #f2f2f2;
+    --title: #343a40;
+    --dialbar: white;
+    --shadow: #00000012;
+    --logoblue: #092240;
+    --indigo: #0065A3;
+    --redone: #E2231A;
+    --redtwo: red;
+}
+
+body{
+    width: 80vw;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--body);
+}
+
+.hidden{
+    display:none;
+}
+
+.header{
+    width:70vw;
+    height: calc(5vw);
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    margin-top: 3%;
+    text-align: center;
+}
+.header .logo{
+    height: 60%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.header .title{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    color: var(--title);
+    margin-left: 20px;
+    font-size: calc(2vw);
+}
+
+
+
+.dial-bar{
+    width:70vw;
+    height: calc(5vw);
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    margin-top: 3%;
+    background-color: var(--dialbar);
+    box-shadow: -1px 1px 1px 1px var(--shadow);
+}
+.dial-bar .logo{
+    height: 80%;
+    margin-left: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.dial-bar .destination{
+    height: 40%;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border: solid 2px;
+    border-radius: 35px;
+    border-color:  #f2f2f2;
+    text-align: center;
+    font-size: 90%;
+}
+.dial-bar .destination:focus{
+    outline: none;
+    border: none;
+    border: solid 4px;
+    border-radius: 35px;
+    border-color: var(--logoblue);
+    font-size: 90%;
+}
+.dial-bar .button-dial{
+    height: 60%;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 78%;
+    border-radius: 35px;
+    background-color: #6abf4b;
+    color: #fff;
+}
+.dial-bar .button-dial:hover{
+    cursor: pointer;
+    background-color:green;
+}
+.dial-bar .button-dial.asleep{
+    cursor: pointer;
+    pointer-events: none;
+    background-color:var(--asleep);
+}
+.dial-bar .button-dial .label{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size:calc(1vw);
+}
+.dial-bar .button-dial .icon{
+    height:50%;
+    position: absolute;
+    top: 50%;
+    right: 60%;
+    transform: translate(0, -50%);
+}
+
+.views{
+    width: 70vw;
+    height: calc(78vh);
+    position: relative;
+    margin: 0 auto;
+}
+.views .full{
+    height: 100%;
+    width: 100%;
+    background-color: var(--views);
+}
+.views .thumbnail {
+    height: calc(9 * 15vw / 16);
+    width: 15vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--views);
+    box-shadow: -3px 3px 5px 6px var(--shadow);
+}
+.views .announcement{
+    width: 100%;
+    height: calc(8vw);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+}
+.views .announcement .title{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    color: var(--title);
+    margin-left: 50px;
+    font-size: calc(2vw);
+}
+.views .announcement .icon{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    height:150%;
+}
+.views .error{
+    width: 100%;
+    height: calc(8vw);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+}
+.views .error .title{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    color: var(--title);
+    margin-left: 30px;
+    font-size: calc(2vw);
+}
+.views .error .icon{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    height:30%;
+}
+
+.buttons{
+    width: 100%;
+    height: calc(4vw);
+    margin: 0 auto;
+    bottom: calc(1vw);
+    right: 0;
+    position: absolute;
+    text-align: center;
+}
+.buttons .button{
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 35px;
+    color: #fff;
+    position: relative;
+}
+.buttons .button.exit{
+    background-color: var(--redone);
+}
+.buttons .button.exit:hover{
+    cursor:pointer;
+    background-color: var(--redtwo);
+}
+.buttons .button.mute{
+    background-color: var(--indigo);
+}
+.buttons .button.mute:hover{
+    cursor:pointer;
+    background-color: var(--logoblue);
+}
+.buttons .button.mute.selected{
+    background-color: var(--logoblue);
+}
+.buttons .button .label{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size:calc(1vw);
+}
+.buttons .button .icon{
+    height:50%;
+    max-width:20%;
+    position: absolute;
+    top: 50%;
+    right: 70%;
+    transform: translate(0, -50%);
+}

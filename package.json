@@ -1,0 +1,23 @@
+{
+  "name": "webex-meetings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "img": "^3.0.3",
+    "jsrsasign": "^8.0.15",
+    "webex": "^1.80.257"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
