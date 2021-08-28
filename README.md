@@ -34,3 +34,13 @@ This defaults to the address *http://localhost:1234*. In order to change the por
 ```
 node_modules\.bin\parcel index.html --port 1122
 ```
+
+## User experience
+
+The Welcome screen attempts to authenticate and create a Client session as soon as the application loads. The animation lets the user know once it is ready.
+
+![Loading sreen](https://github.com/ponchotitlan/webex_web_calling_client/blob/main/screenshots/SCREEN_01.PNG)
+
+Once the authentication with the Webex services is complete, the following screen allows the user to input the personal or meeting Webex address in the bar on the top. The call button is enabled.
+
+![Welcome sreen](https://github.com/ponchotitlan/webex_web_calling_client/blob/main/screenshots/SCREEN_02.PNG)
