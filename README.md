@@ -62,6 +62,10 @@ Additionally, the application can be accessed in the web browser with parameters
 - _meetingid=user-or-meeting@webexdomain.com_: 
 - _callnow=yes_: The client inmediately attempts to call the address mentioned in the *meetingid* URL parameter
 
+```
+http://localhost:1234?meetingid=user-or-meeting@webexdomain.com?callnow=yes
+```
+
 If so, the following screen is delivered, without the option to manually enter a callee address:
 
 ![Call sreen](https://github.com/ponchotitlan/webex_web_calling_client/blob/main/screenshots/SCREEN_05.PNG)
