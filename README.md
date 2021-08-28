@@ -55,7 +55,7 @@ The user can enter the desired personal or meeting Webex address and click *Call
 
 Once the callee accepts the incoming call, or the meeting starts, the Webex call begins. The UI allows only for the most basic in-call operations (mute audio/video, exit).
 
-![Call sreen](https://github.com/ponchotitlan/webex_web_calling_client/blob/main/screenshots/SCREEN_04.PNG)
+![Call screen](https://github.com/ponchotitlan/webex_web_calling_client/blob/main/screenshots/SCREEN_04.png)
 
 Additionally, the application can be accessed in the web browser with parameters in the URL:
 - _meetingid=user-or-meeting@webexdomain.com_: 
